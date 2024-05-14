@@ -17,3 +17,12 @@ This research project focuses on enhancing the interpretability of disease predi
   - **pixel_threshold.ipynb**: Experiments with pixel intensity thresholds, a preprocessing step to help distinguish between foreground and background in the images.
   - **run_seggpt_model.ipynb**: The main notebook used to setup, load, and run the SegGPT model. 
 
+## Usage
+1) Get the test image files in the correct folders and naming conventions.
+2) Add custom masks to the **One-Shot** or **Two-Shot** folders. These masks are crucial for testing how the model performs with different segmentation inputs.
+3) Use `run_seggpt_model.ipynb` to perform predictions.
+4) Ensure the output files are placed in the correct directory with appropriate names.
+5) Run `calculate_metrics.ipynb` to evaluate the model's performance.
+
+## Note
+Segmentation performance highly varies depending on the mask used. Therefore, we encourage users, especially those working within the One-Shot and Two-Shot learning contexts, to experiment by developing their own masks to optimize performance and achieve the best results. 
