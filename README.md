@@ -22,11 +22,12 @@ This project utilizes an open-source dataset available through [PhysioNet](https
   - `run_seggpt_model.ipynb`: The main notebook used to setup, load, and run the SegGPT model. 
 
 ## Usage
-1) Get the test image files in the correct folders and naming conventions. Place the ground-truth labeled images folder within {One-Shot, Two-Shot} folder, depending on the chosen in-context method. 
-2) Add custom masks to the **One-Shot** or **Two-Shot** folders. These masks are crucial for testing how the model performs with different segmentation inputs.
-3) Use `run_seggpt_model.ipynb` to perform predictions.
-4) Ensure the output files are placed in the correct directory ({One-Shot, Two-Shot}/{Urban, Forest, Water, Clouds}, depending on chosen in-context method & segmentation class) with appropriate names. The script expects the filenames `{original_filename}.png` for One-Shot outputs, and `output_{original_file_name}.png` for Two-Shot outputs.
-5) Run `calculate_metrics.ipynb` to evaluate the model's performance.
+1) Retrieve the test image files and ensure they are placed in the correct folders according to the naming conventions. Store the ground-truth labeled images within the appropriate **One-Shot** or **Two-Shot** folder, depending on the in-context learning method selected.
+2) Develop and add custom masks to the **One-Shot** or **Two-Shot** folders. These masks are critical for assessing how the model handles various segmentation challenges.
+3) Execute the `run_seggpt_model.ipynb` notebook to perform the model predictions.
+4) Confirm that the output files are correctly sorted into their respective directories (e.g., **One-Shot/Urban**, **Two-Shot/Forest**), depending on the chosen in-context method and segmentation class. The expected naming convention for output files is `{original_filename}.png` for One-Shot results, and `output_{original_filename}.png` for Two-Shot results.
+5) Use the `calculate_metrics.ipynb` notebook to calculate and evaluate the model's segmentation performance metrics.
+
 
 ## Note
 Segmentation performance highly varies depending on the mask used. Therefore, we encourage users, especially those working within the One-Shot and Two-Shot learning contexts, to experiment by developing their own masks to optimize performance and achieve the best results. 
