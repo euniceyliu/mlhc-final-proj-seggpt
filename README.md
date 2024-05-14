@@ -22,10 +22,10 @@ This project utilizes an open-source dataset available through [PhysioNet](https
   - `run_seggpt_model.ipynb`: The main notebook used to setup, load, and run the SegGPT model. 
 
 ## Usage
-1) Get the test image files in the correct folders and naming conventions.
+1) Get the test image files in the correct folders and naming conventions. Place the ground-truth labeled images folder within {One-Shot, Two-Shot}/{Urban, Forest, Clouds, Water} folder, depending on the chosen in-context method & segmentation class. 
 2) Add custom masks to the **One-Shot** or **Two-Shot** folders. These masks are crucial for testing how the model performs with different segmentation inputs.
 3) Use `run_seggpt_model.ipynb` to perform predictions.
-4) Ensure the output files are placed in the correct directory with appropriate names.
+4) Ensure the output files are placed in the correct directory (the same folder as the labeled images folder) with appropriate names. The script expects the filenames `{original_filename}.png` for One-Shot outputs, and `output_{original_file_name}.png` for Two-Shot outputs.
 5) Run `calculate_metrics.ipynb` to evaluate the model's performance.
 
 ## Note
